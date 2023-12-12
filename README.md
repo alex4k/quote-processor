@@ -1,16 +1,16 @@
-# quote-processor
+# Quote-Processor
 Java REST microservice sample. It contains the logic to work with "Quote" objects at the backend side and provides REST API for the following:
 - create/view users
 - create/view/remove quotes, getting top, worst and rando quotes
 - vote for quotes by users
-- simple analysis for the vouting process in time
+- simple analysis for the voting process in time
 
 - [Building](#building)
 - [Public HTTP API](#http-api)
 
 ## Building
 
-Note: I have verified the applicaion on my Linux workstation with Ubuntu 22.04 and Java 17.
+Note: I have verified the application on my Linux workstation with Ubuntu 22.04 and Java 17.
 
 ### Linux
 - [Java 17](https://adoptium.net/temurin/releases/?os=linux&version=17), installation instructions for latest version included in the link. Java 17 is the minimum version.
@@ -25,7 +25,7 @@ To run just tests:
 
 ### Scripts
 
-There is the script for cretaing the Docker image. To make it run
+The project contains the script for cretaing the Docker image. To make it run
 
 `docker build . -t quote-processor:latest`
 
@@ -216,7 +216,7 @@ JSON body example:
 #### Response
 Upon a successful conversion: HTTP 200, with string "Voted successfully".
 
-### Method: Get graph pf votes for the quote
+### Method: Get graph of votes for the quote
 GET /votes/quote/{id}
 
 #### Response
