@@ -202,5 +202,40 @@ JSON body example:
 #### Response
 Upon a successful conversion: HTTP 200, with string "Voted successfully".
 
+### Method: Devote for the quote
+POST /devote
 
+Votes for the quote from the provided user
+JSON body example:
+```javascript
+{
+   "userId": 21,
+   "quoteId": 1       
+}
+```
+#### Response
+Upon a successful conversion: HTTP 200, with string "Voted successfully".
 
+### Method: Get graph pf votes for the quote
+GET /votes/quote/{id}
+
+#### Response
+Upon a successful conversion: HTTP 200, with arrays of information when votes were changing
+
+```javascript
+[
+    {
+        "quoteId": 1,
+        "rate": 1,
+        "userId": 1,
+        "created_time": "2023-12-09T18:08:00Z"
+    },
+    {
+        "quoteId": 1,
+        "rate": 2,
+        "userId": 2,
+        "created_time": "2023-12-09T18:31:00Z"
+    },
+   ....      
+]
+```
