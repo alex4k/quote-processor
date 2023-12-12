@@ -119,3 +119,74 @@ Upon a successful conversion: HTTP 200 and the response:
     }
 }
 ```
+
+### Method: Update a quote
+PUT /quotes/{id}
+JSON body example:
+```javascript
+{
+    "content": "The only limit to our realization of tomorrow will be our doubts of today !!!. "       
+}
+```
+#### Response
+Upon a successful conversion: HTTP 200, with a quote details
+```javascript
+{
+    "quoteId": 1,
+    "content": "Updated Content",
+    "createdTime": "2023-12-12T13:17:31Z",
+    "totalVotes": 15,
+    "lastVoted": "2023-12-10T18:15:00Z",
+    "owner": {
+        "userId": 1,
+        "name": "BlazeRider",
+        "landingPage": "path_to_user_page"
+    }
+}
+```
+### Method: get quotes
+GET /quotes
+
+#### Response
+Upon a successful conversion: HTTP 200, with array of quotes
+```javascript
+[
+  { "quoteId": 1,
+    ...
+  },
+  { "quoteId": 2,
+    ...
+  }
+...
+]
+```
+### Method: get top 10 quotes
+GET /quotes/top10
+
+Returns top 10 rated quotes
+
+#### Response
+Upon a successful conversion: HTTP 200, with array of quotes
+
+### Method: get worst 10 quotes
+GET /quotes/worst10
+
+Returns worst 10 rated quotes
+
+#### Response
+Upon a successful conversion: HTTP 200, with array of quotes.
+
+### Method: get a random quote
+GET /quotes/random
+
+Returns a random quote
+
+### Method: Delete a quote
+DELETE /quotes/{id}
+
+Deletes a quote with {id}. Also it removes votes for this quote. 
+
+#### Response
+Upon a successful conversion: HTTP 200, with string "Quote removed successfully",
+
+
