@@ -48,7 +48,7 @@ JSON body example:
 }
 ```
 #### Response
-Upon a successful conversion: HTTP 200, with repeating the initial body plus userId, timestamp and landing page attributes:
+Upon a successful conversion: HTTP 201, with repeating the initial body plus userId, timestamp and landing page attributes:
 ```javascript
 {  "userId": 1,
    "name": "User Name",
@@ -104,7 +104,7 @@ JSON body example:
 }
 ```
 #### Response
-Upon a successful conversion: HTTP 200 and the response:
+Upon a successful conversion: HTTP 201 and the response:
 ```javascript
 {
     "quoteId": 31,
@@ -164,7 +164,6 @@ Upon a successful conversion: HTTP 200, with array of quotes
 GET /quotes/top10
 
 Returns top 10 rated quotes
-
 #### Response
 Upon a successful conversion: HTTP 200, with array of quotes
 
@@ -187,6 +186,21 @@ DELETE /quotes/{id}
 Deletes a quote with {id}. Also it removes votes for this quote. 
 
 #### Response
-Upon a successful conversion: HTTP 200, with string "Quote removed successfully",
+Upon a successful conversion: HTTP 200, with string "Quote removed successfully".
+
+### Method: Vote for the quote
+POST /vote
+
+Votes for the quote from the provided user
+JSON body example:
+```javascript
+{
+   "userId": 21,
+   "quoteId": 1       
+}
+```
+#### Response
+Upon a successful conversion: HTTP 200, with string "Voted successfully".
+
 
 
