@@ -13,8 +13,8 @@ Java REST microservice sample. It contains the logic to work with "Quote" object
 Note: I have verified the applicaion on my Linux workstation with Ubuntu 22.04 and Java 17.
 
 ### Linux
-- [Java 17] (https://adoptium.net/temurin/releases/?os=linux&version=17), installation instructions for latest version included in the link. Java 17 is the minimum version.
-- [Maven] (https://maven.apache.org/download.cgi) It requires the Maven installed as well.
+- [Java 17](https://adoptium.net/temurin/releases/?os=linux&version=17), installation instructions for latest version included in the link. Java 17 is the minimum version.
+- [Maven](https://maven.apache.org/download.cgi) It requires the Maven installed as well.
 
 ### Commands 
 To build the application run the following command:
