@@ -1,7 +1,7 @@
 # Quote-Processor
 Java REST microservice sample. It contains the logic to work with "Quote" objects at the backend side and provides REST API for the following:
 - create/view users
-- create/view/remove quotes, getting top, worst and rando quotes
+- create/view/remove quotes, getting top, worst and random quotes
 - vote for quotes by users
 - simple analysis for the voting process in time
 
